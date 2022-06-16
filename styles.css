@@ -16,6 +16,9 @@ textarea{
     border-color: rgb(0, 0, 0)
 }
 
+::placeholder{
+    color: rgb(255, 255, 255);
+}
 
 img{
     display: block;
@@ -59,7 +62,7 @@ body{
     background-color: white;
     display: block;
     height: 20vh;
-    color: black;
+    color: white;
     text-align: center;
     font-size: x-large;
     padding-top: 0.5rem;
