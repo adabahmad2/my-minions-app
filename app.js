@@ -4,6 +4,7 @@ var txtOutput = document.querySelector("#output");
 
 var serverUrl="https://api.funtranslations.com/translate/minion.json";
 
+
 function getTranslationURL(userInput)
 {
     return serverUrl + "?" + "text=" + userInput;
@@ -17,7 +18,8 @@ function errorHandler(error)
 
 
 function clickEventHandler()
-{
+{   
+    txtOutput.scrollIntoView();
     //taking input to send to server
     var InputText = txtInput.value;
 
@@ -31,6 +33,22 @@ function clickEventHandler()
     })
     .catch(errorHandler);
 };
+// txtInput.addEventListener("keypress", (event)=> {
+//     if (event.keyCode === 13) { // key code of the keybord key
+//       event.preventDefault();
+//         hello()
+//         txtOutput.scrollIntoView();
+//     }
+// });
 
+txtInput.addEventListener('keypress', function hello(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        hello2()
+        txtOutput.scrollIntoView();
+    }
+});
+
+function hello2() { console.log("enter key pressed!"); clickEventHandler();};
 
 btnTranslate.addEventListener("click", clickEventHandler)

@@ -1,4 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Fascinate&family=Gloria+Hallelujah&family=Montserrat:wght@400;700&family=Patua+One&family=Signika&family=Stalinist+One&family=Ubuntu:ital,wght@0,400;1,700&display=swap');
+
+body{
+    font-family: 'Patua One', cursive;
+    font-size: large;
+    font-weight: 50;
+    background-color: black;
+    width:100%;
+    max-width: 90%;
+    margin: auto;
+    color: yellow;
+    background-image: url("bg.jpg");
+    /* background-repeat: no-repeat;
+    background-size: 100% 100%; */
+}
+
+
 textarea{
+    
+    text-shadow: rgb(0, 0, 0) 0.1rem 0.1rem;
     /* width:max-content 90%; */
     display: block;
     height: 20vh;
@@ -20,7 +39,7 @@ textarea{
     color: rgb(255, 255, 255);
 }
 
-img{
+/* img{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -28,26 +47,61 @@ img{
     margin-top: -1rem;
     padding-bottom: 2rem;
 
+} */
+
+.avatar{
+    background-image: url("minions.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 2rem ;
+    margin-top: -1.5rem;
+    height: 35rem;
+    width:35rem;
+    display: block;
+    cursor: pointer;
 }
+
+.avatar::before,
+.avatar::after {
+  position: absolute;
+  top: 8rem;
+  left: 60%;
+  transform: translateX(50%)translateY();
+}
+
+.avatar:hover::before{
+  content:attr(data-tooltip);
+  /* content: "helllooo"; */
+  white-space:pre-line;
+  padding: 2rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  width: 25rem;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 3rem 3rem 3rem 0rem;
+  text-align:left;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.75);
+  font-family:'Courier New', Courier, monospace;
+  font-style: italic;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px rgba(234, 255, 0, 0.615);
+  box-shadow: -1px 1px 3/0px 0px rgba(255, 234, 0, 0.2);
+}
+
 
 h1{
-    font-size: 3rem;
+    font-size: 5rem;
+    display: block;
+    margin-top: 1.5rem;
+    text-shadow: rgb(0, 0, 0) 0.5rem 0.5rem;
+    font-family: 'Fascinate', cursive;
     color: yellow;
-}
-
-body{
-    background-color: black;
-    width:100%;
-    max-width: 90%;
-    margin: auto;
-    color: yellow;
-    background-image: url("bg.jpg");
-    /* background-repeat: no-repeat;
-    background-size: 100% 100%; */
 }
 
 
 .button{
+    font-family: 'Patua One', cursive;
     background-color: yellow;
     border: none;
     color: black;
@@ -58,13 +112,14 @@ body{
 }
 
 #output{
+
+    text-shadow: rgb(0, 0, 0) 0.1rem 0.1rem;
     border: 1px solid white;
-    background-color: white;
     display: block;
     height: 20vh;
     color: white;
     text-align: center;
-    font-size: x-large;
+    font-size: xx-large;
     padding-top: 0.5rem;
     box-shadow:black -8px 8px 8px 12px;
     background-color: rgba(255, 255, 0, 0.254);
@@ -79,6 +134,12 @@ body{
 
 footer{
     margin: 3rem;
+    font-size: 1rem;
+    color:white;
+    /* background-color: rgb(0, 0, 0);
+    padding: 5rem;
+    margin-bottom: 0rem;
+    border-radius: 2rem 2rem 0rem 0rem; */
 }
 
 button.extra-padding{
